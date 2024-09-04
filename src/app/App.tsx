@@ -2,6 +2,7 @@ import { useState } from "react";
 import Login from "../login/Login";
 import Welcome from "../welcome/Welcome";
 import styles from "./app.module.sass";
+import myImage from '../assets/illustration.jpg';
 
 const App: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -17,11 +18,7 @@ const App: React.FC = () => {
   return (
     <div className={styles.section}>
       <div>
-        <img
-          className={styles.img}
-          src={"../public/illustration.jpg"}
-          alt='start'
-        />
+        <img className={styles.img} src={myImage} alt='start' />
       </div>
       <div className={styles.wrap}>
         {isAuthenticated ? (
